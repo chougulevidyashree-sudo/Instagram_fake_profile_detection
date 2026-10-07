@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Fake Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Instagram Fake Account Detection</h1>
+
+<form action="/predict" method="POST">
+
+<input type="number" name="followers" placeholder="Followers" required>
+<input type="number" name="following" placeholder="Following" required>
+<input type="number" name="posts" placeholder="Posts" required>
+<input type="number" step="0.1" name="engagement_rate" placeholder="Engagement Rate" required>
+<input type="number" name="bio_length" placeholder="Bio Length" required>
+<input type="number" name="has_profile_pic" placeholder="Profile Pic (0/1)" required>
+<input type="number" name="username_digits" placeholder="Username Digits" required>
+<input type="number" name="is_private" placeholder="Private Account (0/1)" required>
+<input type="number" name="external_url" placeholder="External URL (0/1)" required>
+<input type="number" name="avg_likes" placeholder="Average Likes" required>
+<input type="number" name="avg_comments" placeholder="Average Comments" required>
+<input type="number" name="hashtags_count" placeholder="Hashtags Count" required>
+<input type="number" name="account_age" placeholder="Account Age" required>
+<input type="number" name="spam_words" placeholder="Spam Words (0/1)" required>
+
+<button type="submit">Analyze Account</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
